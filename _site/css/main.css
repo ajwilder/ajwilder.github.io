@@ -1,0 +1,58 @@
+/* Site-Wide Styles */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px; }
+
+h1 {
+  font-size: 3em;
+  padding: 0.5em;
+  font-weight: 700; }
+
+/* HEADER STYLES */
+.header {
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
+  padding: 1em 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em; }
+  .header a {
+    text-decoration: none;
+    color: black;
+    padding: 1.4em; }
+  .header a:hover {
+    color: #007199;
+    background: #f5f8fa; }
+
+.header-nav {
+  float: right; }
+
+.header-nav > li {
+  display: inline-block;
+  font-size: 0.8em;
+  margin: 0;
+  padding: 0; }
+
+.header-logo {
+  letter-spacing: 0.15em; }
+
+.hero-home {
+  background-color: #f5f8fa;
+  background-size: cover;
+  box-sizing: border-box;
+  height: 40vh;
+  position: relative;
+  text-align: center;
+  vertical-align: center;
+  border-bottom: 1px solid darkgrey;
+  border-top: 1px solid darkgrey; }
+  .hero-home img {
+    height: 6em;
+    width: 6em;
+    border-radius: 50%;
+    margin-top: 1em;
+    padding: 0.2em;
+    border: 1px solid darkgrey; }
+  .hero-home p {
+    color: darkgrey;
+    font-size: 1.2em; }
