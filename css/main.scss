@@ -55,9 +55,6 @@ a:hover {
   border-top: 1px solid darkgrey;
 }
 
-
-
-
 /* HEADER STYLES */
 .header {
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -83,7 +80,7 @@ a:hover {
       padding: 0;
     }
     .nineties {
-      display: none;
+
       &__link {
         top: 4em;
         right: 0em;
@@ -95,6 +92,9 @@ a:hover {
         display: inline-block;
       }
     }
+  }
+  &__mobile-check, &__mobile-label {
+    display: none;
   }
 }
 
@@ -191,6 +191,9 @@ a:hover {
 }
 
 @media (max-width: 600px) {
+  .mobile-only {
+    display: inline-block;
+  }
   .about-home__contacts {
     display: none;
   }
@@ -207,5 +210,42 @@ a:hover {
       }
     }
   }
+  .header {
+    &__logo {
+      display: none;
+    }
+    &__nav {
+      background-color: $background_grey;
+      box-sizing: border-box;
+      left: 0;
+      max-height: 0;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      text-align: center;
+      top: 2.5em;
+      transition: all 0.5s ease-in-out;
+      width: 100vw;
+      z-index: 9;
+    }
+    &__nav li {
+      border-top: 1px solid darkgrey;
+      display: block;
+      padding: 1.5em;
+    }
+    &__nav a:hover {
+      background: none;
+    }
 
+    &__nav  li:last-child {
+      border-bottom: 1px solid darkgrey;
+    }
+    &__mobile-label {
+      display: block;
+      float: right;
+    }
+    &__mobile-check:checked ~ .header__nav {
+      max-height: 1000px;
+    }
+  }
 }

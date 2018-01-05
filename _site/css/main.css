@@ -64,16 +64,16 @@ a:hover {
       font-size: 0.8em;
       margin: 0;
       padding: 0; }
-    .header__nav .nineties {
-      display: none; }
-      .header__nav .nineties__link {
-        top: 4em;
-        right: 0em;
-        position: absolute;
-        display: none;
-        z-index: 20; }
-      .header__nav .nineties:hover .nineties__link {
-        display: inline-block; }
+    .header__nav .nineties__link {
+      top: 4em;
+      right: 0em;
+      position: absolute;
+      display: none;
+      z-index: 20; }
+    .header__nav .nineties:hover .nineties__link {
+      display: inline-block; }
+  .header__mobile-check, .header__mobile-label {
+    display: none; }
 
 .footer {
   border-top: 1px solid darkgrey;
@@ -140,6 +140,9 @@ a:hover {
   color: darkgrey; }
 
 @media (max-width: 600px) {
+  .mobile-only {
+    display: inline-block; }
+
   .about-home__contacts {
     display: none; }
 
@@ -151,4 +154,33 @@ a:hover {
       padding: 0 1em;
       min-width: 88vw; }
       .col-three__middle--home {
-        min-width: 90vw; } }
+        min-width: 90vw; }
+
+  .header__logo {
+    display: none; }
+  .header__nav {
+    background-color: #f5f8fa;
+    box-sizing: border-box;
+    left: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 2.5em;
+    transition: all 0.5s ease-in-out;
+    width: 100vw;
+    z-index: 9; }
+  .header__nav li {
+    border-top: 1px solid darkgrey;
+    display: block;
+    padding: 1.5em; }
+  .header__nav a:hover {
+    background: none; }
+  .header__nav li:last-child {
+    border-bottom: 1px solid darkgrey; }
+  .header__mobile-label {
+    display: block;
+    float: right; }
+  .header__mobile-check:checked ~ .header__nav {
+    max-height: 1000px; } }
