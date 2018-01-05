@@ -1,70 +1,178 @@
 ---
 ---
 
+// VARIABLES
+$link_hover_color: #007199;
+$background_grey: #f5f8fa;
+$font_color: #3A4145;
+
 /* Site-Wide Styles */
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-family: Montserrat;
+  font-size: 17px;
+  color: $font_color;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 h1 {
   font-size: 3em;
-  padding: 0.5em;
+  padding: 0.3em 0;
   font-weight: 700;
 }
+h2 {
+  font-size: 2em;
+  padding: 0.3em 0;
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.5em;
+  padding: 0.3em 0;
+  font-weight: 600;
+}
+p {
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+  font-size: 1.1em;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $font-color;
+}
+a:hover {
+  color: $link_hover_color;
+}
+.float_right {
+  float: right;
+}
+
+// SITEWIDE FLEXBOX
+.content-container {
+  flex-grow: 1;
+  border-top: 1px solid darkgrey;
+}
+
+
+
 
 /* HEADER STYLES */
 .header {
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: 700;
-  font-size: 1.2em;
   padding: 1em 0;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   a {
-    text-decoration: none;
-    color: black;
-      padding: 1.4em;
+    padding: 1.4em;
   }
   a:hover {
-    color: #007199;
-    background: #f5f8fa;
+    background: $background_grey;
+  }
+  &__logo {
+    letter-spacing: 0.15em;
+  }
+  &__nav {
+    float: right;
+    > li {
+      display: inline-block;
+      font-size: 0.8em;
+      margin: 0;
+      padding: 0;
+    }
   }
 }
-.header-nav {
-  float: right;
-}
-.header-nav > li {
-  display: inline-block;
-  font-size: 0.8em;
 
-  margin: 0;
-  padding: 0;
-}
-.header-logo {
-  letter-spacing: 0.15em;
-}
-
-//Hero styles
-.hero-home {
-  background-color: #f5f8fa;
-  background-size: cover;
-  box-sizing: border-box;
-  height: 40vh;
-  position: relative;
-  text-align: center;
-  vertical-align: center;
-  border-bottom: 1px solid darkgrey;
+// FOOTER STYLES
+.footer {
   border-top: 1px solid darkgrey;
-  img {
-    height: 6em;
-    width: 6em;
-    border-radius: 50%;
-    margin-top: 1em;
-    padding: 0.2em;
-    border: 1px solid darkgrey;
+  padding: 1em;
+  color: darkgrey;
+  margin-top: 2em;
+  &__contacts {
+    float: right;
+
+    > li {
+      display: inline-block;
+    }
   }
+}
+
+// THREE COLUMN LAYOUT STYLES
+.col-three {
+  display: flex;
+  &__side {
+    flex: 1 1 auto;
+  }
+  &__middle {
+    flex: 0 0 45%;
+    min-width: 500px;
+    &--home {
+      flex: 0 0 50%;
+      min-width: 550px;
+    }
+  }
+}
+
+// HERO STYLES
+.hero{
+  display: flex;
+  align-items: center;
+  background-color: #f5f8fa;
+  border-bottom: 1px solid darkgrey;
+  margin-bottom: 2em;
+  min-height: 30vh;
   p {
     color: darkgrey;
     font-size: 1.2em;
+  }
+  &__content {
+    flex: 1;
+  }
+  &-home {
+    height: 40vh;
+    position: relative;
+    text-align: center;
+    vertical-align: center;
+    img {
+      box-shadow: 1px 1px 2px 0 #000 ;
+      height: 6em;
+      width: 6em;
+      border-radius: 50%;
+      margin-top: 1em;
+      padding: 0.2em;
+      border: 1px solid darkgrey;
+    }
+  }
+  &-page {
+    h1 {
+      text-align: left;
+    }
+  }
+}
+
+// HOME PAGE STYLES
+.about-home {
+  display: flex;
+  &__content {
+    padding: 0 1em;
+    flex: 1 0 80%;
+  }
+  &__contacts {
+    flex: 1 0 20%;
+    padding: 0 1em;
+    display: block;
+  }
+}
+
+// BLOG STYLES
+.blog-posts {
+  h3 {
+    padding: 0.3em 0;
+  }
+  .byline {
+    color: darkgrey;
   }
 }

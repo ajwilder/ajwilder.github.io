@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<div class="hero hero-page">
+  <div class="hero__content">
+    <div class="col-three about-home">
+      <div class="col-three__side"></div>
+      <div class="col-three__middle">
+        <h1>Blog</h1>
+        <p>
+          Everyone is supposed to have blog. You have to sell yourself, they say.
+        </p>
+      </div>
+      <div class="col-three__side"></div>
+    </div>
+  </div>
+</div>
+<div class="col-three about-home">
+  <div class="col-three__side"></div>
+  <div class="col-three__middle">
+    {% for post in site.posts %}
+      <div class="blog-posts">
+        <header class="post-header">
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <span class="byline">{{ post.date | date: '%B %d, %Y' }}</span>
+        </header>
+        {{ post.excerpt }}
+        <span class="float_right"><a href="{{ post.url }}"> Continue Reading >> </a></span>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="col-three__side">
+
+  </div>
+</div>
