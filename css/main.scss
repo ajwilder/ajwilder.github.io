@@ -6,7 +6,7 @@ $link_hover_color: #007199;
 $background_grey: #f5f8fa;
 $font_color: #3A4145;
 
-/* Site-Wide Styles */
+// SITEWIDE STYLES
 body {
   font-family: Montserrat;
   font-size: 17px;
@@ -49,13 +49,16 @@ a:hover {
   float: right;
 }
 
+
 // SITEWIDE FLEXBOX
 .content-container {
   flex-grow: 1;
   border-top: 1px solid darkgrey;
 }
 
-/* HEADER STYLES */
+
+
+// HEADER STYLES
 .header {
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: 700;
@@ -80,7 +83,6 @@ a:hover {
       padding: 0;
     }
     .nineties {
-
       &__link {
         top: 4em;
         right: 0em;
@@ -91,6 +93,9 @@ a:hover {
       &:hover .nineties__link {
         display: inline-block;
       }
+    }
+    >li.header__nav__home {
+      display: none;
     }
   }
   &__mobile-check, &__mobile-label {
@@ -232,6 +237,9 @@ a:hover {
       border-top: 1px solid darkgrey;
       display: block;
       padding: 1.5em;
+    }
+    &__nav li.header__nav__home {
+      display: block;
     }
     &__nav a:hover {
       background: none;
