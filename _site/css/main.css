@@ -64,14 +64,16 @@ a:hover {
       font-size: 0.8em;
       margin: 0;
       padding: 0; }
-    .header__nav .nineties__link {
-      top: 4em;
-      right: 0em;
-      position: absolute;
-      display: none;
-      z-index: 20; }
-    .header__nav .nineties:hover .nineties__link {
-      display: inline-block; }
+    .header__nav .nineties {
+      display: none; }
+      .header__nav .nineties__link {
+        top: 4em;
+        right: 0em;
+        position: absolute;
+        display: none;
+        z-index: 20; }
+      .header__nav .nineties:hover .nineties__link {
+        display: inline-block; }
 
 .footer {
   border-top: 1px solid darkgrey;
