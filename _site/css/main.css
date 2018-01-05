@@ -64,6 +64,14 @@ a:hover {
       font-size: 0.8em;
       margin: 0;
       padding: 0; }
+    .header__nav .nineties__link {
+      top: 4em;
+      right: 0em;
+      position: absolute;
+      display: none;
+      z-index: 20; }
+    .header__nav .nineties:hover .nineties__link {
+      display: inline-block; }
 
 .footer {
   border-top: 1px solid darkgrey;
@@ -99,7 +107,7 @@ a:hover {
   .hero__content {
     flex: 1; }
   .hero-home {
-    height: 40vh;
+    min-height: 40vh;
     position: relative;
     text-align: center;
     vertical-align: center; }
@@ -128,3 +136,17 @@ a:hover {
   padding: 0.3em 0; }
 .blog-posts .byline {
   color: darkgrey; }
+
+@media (max-width: 600px) {
+  .about-home__contacts {
+    display: none; }
+
+  .col-three {
+    display: block; }
+    .col-three__side {
+      display: none; }
+    .col-three__middle {
+      padding: 0 1em;
+      min-width: 88vw; }
+      .col-three__middle--home {
+        min-width: 90vw; } }

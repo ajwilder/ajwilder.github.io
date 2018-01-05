@@ -82,6 +82,18 @@ a:hover {
       margin: 0;
       padding: 0;
     }
+    .nineties {
+      &__link {
+        top: 4em;
+        right: 0em;
+        position: absolute;
+        display: none;
+        z-index: 20;
+      }
+      &:hover .nineties__link {
+        display: inline-block;
+      }
+    }
   }
 }
 
@@ -132,7 +144,7 @@ a:hover {
     flex: 1;
   }
   &-home {
-    height: 40vh;
+    min-height: 40vh;
     position: relative;
     text-align: center;
     vertical-align: center;
@@ -175,4 +187,24 @@ a:hover {
   .byline {
     color: darkgrey;
   }
+}
+
+@media (max-width: 600px) {
+  .about-home__contacts {
+    display: none;
+  }
+  .col-three {
+    display: block;
+    &__side {
+      display: none;
+    }
+    &__middle {
+      padding: 0 1em;
+      min-width: 88vw;
+      &--home {
+        min-width: 90vw;
+      }
+    }
+  }
+
 }
