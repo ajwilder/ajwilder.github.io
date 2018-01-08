@@ -1,9 +1,8 @@
 ---
 ---
-
 // VARIABLES
 $link_hover_color: #007199;
-$background_grey: #f5f8fa;
+$background_grey: #f7fdff;
 $font_color: #3A4145;
 
 // SITEWIDE STYLES
@@ -56,7 +55,24 @@ a:hover {
   border-top: 1px solid darkgrey;
 }
 
+// MEDIA STYLES
+.media {
+  overflow: hidden;
+  margin: 10px;
+  
+  .img {
 
+    float: left;
+    margin-right: 10px;
+    img {
+      display: block;
+    }
+  }
+  .body {
+    overflow: hidden;
+
+  }
+}
 
 // HEADER STYLES
 .header {
@@ -67,9 +83,11 @@ a:hover {
   letter-spacing: 0.15em;
   a {
     padding: 1.4em;
+    border: 1px solid transparent;
   }
   a:hover {
     background: $background_grey;
+    border: 1px solid darkgrey;
   }
   &__logo {
     letter-spacing: 0.15em;
@@ -106,14 +124,55 @@ a:hover {
 // FOOTER STYLES
 .footer {
   border-top: 1px solid darkgrey;
-  padding: 1em;
+  padding: 0.6em;
   color: darkgrey;
   margin-top: 2em;
+  background-color: $background_grey;
+  font-size: 0.8em;
+  &__name {
+    vertical-align: sub;
+  }
   &__contacts {
+    font-size: 0.8em;
     float: right;
-
-    > li {
+    vertical-align: middle;
+    position: relative;
+    .social-link {
+      margin: 0 2px 0 0;
+    }
+    .contact_label {
+      font-size: 0;
+    }
+    .contact_label.active {
+      color: white;
+      position: absolute;
+      padding: 0.3em;
+      font-size: 1.2em;
+      display: block;
+      top: -2.3em;
+      right: 0.5em;
+      border: 1px solid $font_color;
+      background-color: $font_color;
+      box-shadow: 3px 3px 4px darkgrey;
+    }
+    .social-link.active:before {
+      border: 0.5em solid;
+      border-color: $font_color transparent transparent;
+      top: -0.7em;
+      right:1em;
+      content: "";
+      height: 0;
+      width: 0;
+      position: absolute;
+      z-index:  10;
+    }
+    a, li {
+      position: relative;
+      color: darkgrey;
       display: inline-block;
+    }
+    a:hover {
+      color: $link_hover_color;
     }
   }
 }
@@ -138,7 +197,7 @@ a:hover {
 .hero{
   display: flex;
   align-items: center;
-  background-color: #f5f8fa;
+  background-color: $background_grey;
   border-bottom: 1px solid darkgrey;
   margin-bottom: 2em;
   min-height: 30vh;
@@ -182,6 +241,23 @@ a:hover {
     flex: 1 0 20%;
     padding: 0 1em;
     display: block;
+    h3 {
+      margin-bottom: 0.4em;
+    }
+    li {
+      font-size: 0.9em;
+      padding: 0.2em 0;
+    }
+    .contact_label {
+      vertical-align: super;
+    }
+  }
+}
+
+// RESUME STYLES
+.resume {
+  h2, h3, h4 {
+    text-decoration: underline;
   }
 }
 
@@ -192,7 +268,11 @@ a:hover {
   }
   .byline {
     color: darkgrey;
+    &__date {
+
+    }
   }
+
 }
 
 @media (max-width: 600px) {

@@ -1,5 +1,6 @@
 ---
 layout: default
+title: "Blog | Alan Wilder"
 ---
 
 <div class="hero hero-page">
@@ -23,7 +24,7 @@ layout: default
       <div class="blog-posts">
         <header class="post-header">
           <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-          <span class="byline">{{ post.date | date: '%B %d, %Y' }}</span>
+          <span class="byline byline__date">{{ post.date | date: '%B %d, %Y' }}</span>
         </header>
         {{ post.excerpt }}
         <span class="float_right"><a href="{{ post.url }}"> Continue Reading >> </a></span>
