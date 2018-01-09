@@ -48,31 +48,83 @@ a:hover {
   float: right;
 }
 
-
 // SITEWIDE FLEXBOX
 .content-container {
   flex-grow: 1;
   border-top: 1px solid darkgrey;
 }
 
+// THREE COLUMN LAYOUT STYLES
+.col-three {
+  display: flex;
+  &__side {
+    flex: 1 1 auto;
+  }
+  &__middle {
+    flex: 0 0 45%;
+    min-width: 500px;
+    &--home {
+      flex: 0 0 50%;
+      min-width: 550px;
+    }
+  }
+}
+
+// ROW STYLES
+.row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1em;
+  &__col-left-icon {
+    flex: 0 1 33%;
+    i {
+      float: right;
+      margin-right: 0.5em;
+    }
+  }
+  &__body {
+    flex: 0 1 55%;
+  }
+}
+
+// POPUPS
+.popup {
+  overflow: hidden;
+  max-height: 0px;
+  width: 100%;
+  opacity: 0;
+  transition: all 1s ease;
+}
+.popup.active {
+  opacity: 1;
+  max-height: 400px;
+}
+.reveal {
+  cursor: pointer;
+}
+
 // MEDIA STYLES
 .media {
   overflow: hidden;
-  margin: 10px;
-  
+  margin: 12px;
+  display: flex;
   .img {
-
     float: left;
     margin-right: 10px;
+
     img {
       display: block;
     }
   }
-  .body {
+  &__body {
+    width: 100%;
     overflow: hidden;
+    padding: auto;
 
   }
 }
+
 
 // HEADER STYLES
 .header {
@@ -102,7 +154,8 @@ a:hover {
     }
     .nineties {
       &__link {
-        top: 4em;
+        border: 6px outset darkgrey;
+        top: 3.8em;
         right: 0em;
         position: absolute;
         display: none;
@@ -177,22 +230,6 @@ a:hover {
   }
 }
 
-// THREE COLUMN LAYOUT STYLES
-.col-three {
-  display: flex;
-  &__side {
-    flex: 1 1 auto;
-  }
-  &__middle {
-    flex: 0 0 45%;
-    min-width: 500px;
-    &--home {
-      flex: 0 0 50%;
-      min-width: 550px;
-    }
-  }
-}
-
 // HERO STYLES
 .hero{
   display: flex;
@@ -210,7 +247,7 @@ a:hover {
   }
   &-home {
     min-height: 40vh;
-    position: relative;
+
     text-align: center;
     vertical-align: center;
     img {
@@ -256,9 +293,11 @@ a:hover {
 
 // RESUME STYLES
 .resume {
-  h2, h3, h4 {
-    text-decoration: underline;
+  ul{
+    line-height: 1.3;
+
   }
+
 }
 
 // BLOG STYLES
@@ -275,6 +314,9 @@ a:hover {
 
 }
 
+
+
+// MOBILE STYLES
 @media (max-width: 600px) {
   .mobile-only {
     display: inline-block;
