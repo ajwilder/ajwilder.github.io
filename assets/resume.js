@@ -11,7 +11,7 @@ function expandResumeSection(e) {
   document.querySelectorAll(`[data-reveal="${this.dataset.reveal}"]`)
   .forEach(function(element){
     element.classList.toggle('active');
-  })
+  });
   $('html, body').animate({
     scrollTop: Math.min(popup.offsetParent.offsetTop, document.body.offsetHeight - window.innerHeight + popup.offsetParent.dataset.offset)
   }, 1000)
