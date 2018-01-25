@@ -85,11 +85,11 @@ a:hover {
 
 .media {
   overflow: hidden;
-  margin: 12px;
+  margin: 20px 12px;
   display: flex; }
   .media .img {
     float: left;
-    margin-right: 10px; }
+    margin-right: 15px; }
     .media .img img {
       display: block; }
   .media__body {
@@ -144,15 +144,17 @@ i.arrow {
       font-size: 0.8em;
       margin: 0;
       padding: 0; }
-    .header__nav .nineties__link {
-      border: 6px outset darkgrey;
-      top: 3.8em;
-      right: 0em;
-      position: absolute;
-      display: none;
-      z-index: 20; }
-    .header__nav .nineties:hover .nineties__link {
-      display: inline-block; }
+    .header__nav .nineties {
+      display: none; }
+      .header__nav .nineties__link {
+        border: 6px outset darkgrey;
+        top: 3.8em;
+        right: 0em;
+        position: absolute;
+        display: none;
+        z-index: 20; }
+      .header__nav .nineties:hover .nineties__link {
+        display: inline-block; }
     .header__nav > li.header__nav__home {
       display: none; }
   .header__mobile-check, .header__mobile-label {
@@ -320,7 +322,7 @@ i.arrow {
   .header__nav li {
     border-top: 1px solid darkgrey;
     display: block;
-    padding: 1.5em; }
+    padding: 2em; }
   .header__nav li.header__nav__home {
     display: block; }
   .header__nav a:hover {
